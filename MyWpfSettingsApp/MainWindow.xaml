@@ -1,0 +1,29 @@
+﻿<Window x:Class="MyWpfSettingsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWpfSettingsApp"
+        xmlns:tools="clr-namespace:MyWpfSettingsApp.Tools"
+        tools:WindowsSettings.Save="True" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="240" Width="500" MouseMove="Window_MouseMove" SizeChanged="Window_SizeChanged" MouseDown="Window_MouseDown" Closing="Window_Closing">
+    <Grid>
+        <Rectangle Fill="#FF5D5D5D" Height="48" Stroke="Black" VerticalAlignment="Top" Margin="10,10,9.6,0" Grid.ColumnSpan="2"/>
+        <Label Content="Messages click to clear" HorizontalContentAlignment="Center"	 VerticalAlignment="Top" Margin="32,19,34,0" FontSize="14.667" FontWeight="Bold" FontFamily="Segoe WP Black" Opacity="0.4" Height="29"/>
+        <Label Content="{Binding Message}" ToolTip="Click to clear" VerticalAlignment="Top" Margin="20,19,21,0" Height="29" Background="#FF7A7A7A" MouseDown="Lable_Message_MouseDown" Opacity="0.745" FontWeight="Bold"/>
+
+        <Label Content="MyPrivateStringSettings:" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding MyPrivateStringSettings}" DataContext="{Binding Globals}" HorizontalAlignment="Left" Margin="154,67,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
+
+        <Border BorderThickness="1" BorderBrush="Black" Margin="10,94,105,10">
+            <TextBlock Text="{Binding MyText}" TextWrapping="Wrap" FontWeight="Bold" FontSize="14"/>
+        </Border>
+
+        <Button Content="#1" HorizontalAlignment="Right" Margin="0,0,10,110" VerticalAlignment="Bottom" Width="90" Click="Button_1_Click"/>
+        <Button Content="Stack Overflow" HorizontalAlignment="Right" Margin="0,0,10,85" VerticalAlignment="Bottom" Width="90" Click="Button_StackOverflow_Click"/>
+        <Button Content="Divide by Zero" HorizontalAlignment="Right" Margin="0,0,10,60" VerticalAlignment="Bottom" Width="90" Click="Button_DivideByZero_Click"/>
+        <Button Content="Delete Log Files" HorizontalAlignment="Right" Margin="0,0,10,35" VerticalAlignment="Bottom" Width="90" Click="Button_DeleteLogFiles_Click"/>
+        <Button Content="Close" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="90" Click="Button_Close_Click"/>
+    </Grid>
+</Window>

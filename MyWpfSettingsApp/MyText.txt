@@ -1,0 +1,1 @@
+﻿MyWpfSettingsApp is a small Wpf demo program that shows under .Net 6 how to use settings, global exception handling and logging with NLog and some other small feature.
